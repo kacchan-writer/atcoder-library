@@ -1,0 +1,1212 @@
+{
+  "algorithms": [
+    {
+      "title": "累積和・二次元累積和",
+      "level": "C相当",
+      "cue": "更新のない配列や長方形の和を何度も聞かれる。",
+      "idea": "先頭からの合計を保存し、欲しい区間以外を引く。二次元は重複分を足し戻す。",
+      "invariant": "p[i]はa[:i]の和。p[r]-p[l]ではa[l:r]だけが残る。",
+      "complexity": "一次元: 構築O(N)、問合せO(1)、空間O(N)。二次元: 構築・空間O(HW)、問合せO(1)。",
+      "caution": "更新には不向き。二次元は長方形のリストを渡す。負数も扱える。",
+      "api": "prefix_sum(a)、range_sum(p,l,r)、prefix_sum_2d(grid)、rect_sum(p,top,left,bottom,right)。",
+      "expected": "6\n6",
+      "id": "prefix_sum",
+      "path": "library/prefix_sum.py",
+      "prefix": "acsum",
+      "original_sha256": "3931131810c6a8cc77a2bfac5dda93a54e82d9eb5e826dd4895b3b7900ad94fa",
+      "practice": [
+        {
+          "label": "鉄則本 A06",
+          "url": "https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_ai"
+        },
+        {
+          "label": "鉄則本 A08",
+          "url": "https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_h"
+        },
+        {
+          "label": "ABC122 C",
+          "url": "https://atcoder.jp/contests/abc122/tasks/abc122_c"
+        }
+      ]
+    },
+    {
+      "title": "辞書・出現回数・同じ値のペア",
+      "level": "C相当",
+      "cue": "等しい値の個数やペアを数える。値の範囲が大きい。",
+      "idea": "値をキーに個数を保存する。新しいxは、過去のxの個数だけペアを作る。",
+      "invariant": "各ペアは右側の要素を処理した瞬間に一度だけ数えられる。",
+      "complexity": "平均O(N)時間、O(K)空間。Kは異なる値の数。",
+      "caution": "キーはハッシュ可能な値。辞書のO(1)は平均計算量。",
+      "api": "equal_pairs(a) -> 同値ペア数。Counter(a) -> 値ごとの頻度。",
+      "expected": "4",
+      "id": "frequency",
+      "path": "library/frequency.py",
+      "prefix": "acfreq",
+      "original_sha256": "4c497afe816d680c0f6c19b14edd3f20eaeb0412be51e1206d9490c63ff1b913",
+      "practice": [
+        {
+          "label": "ABC155 C",
+          "url": "https://atcoder.jp/contests/abc155/tasks/abc155_c"
+        },
+        {
+          "label": "ABC159 D",
+          "url": "https://atcoder.jp/contests/abc159/tasks/abc159_d"
+        }
+      ]
+    },
+    {
+      "title": "二分探索・bisect",
+      "level": "C相当",
+      "cue": "整列済み配列の境界、または可否が一方向にだけ変わる答え。",
+      "idea": "必ず条件を満たすokと満たさないngを保持し、距離を半分にする。",
+      "invariant": "答えの境界をokとngの間に保ち、隣接したらokが境界側の答え。",
+      "complexity": "判定T、初期幅WとしてO(T log W)時間、補助空間O(1)。",
+      "caution": "単調性が必要。okは真、ngは偽と既知の整数（領域外の番兵でもよい）。番兵は判定しない。",
+      "api": "boundary(ok,ng,check)。bisect_left(a,x)はx以上が始まる位置、bisect_rightはxより大きい位置。",
+      "expected": "10\n1 3",
+      "id": "binary_search",
+      "path": "library/binary_search.py",
+      "prefix": "acbs",
+      "original_sha256": "a5348c15c74f539b1b39f59831b36f34691fdf01b22d975e6d3db035bc7a2257",
+      "practice": [
+        {
+          "label": "ABC231 C",
+          "url": "https://atcoder.jp/contests/abc231/tasks/abc231_c"
+        },
+        {
+          "label": "ABC146 C",
+          "url": "https://atcoder.jp/contests/abc146/tasks/abc146_c"
+        }
+      ]
+    },
+    {
+      "title": "いもす法・差分配列",
+      "level": "C相当",
+      "cue": "区間への加算をすべて済ませた後で、各位置の値を知りたい。",
+      "idea": "左端に+x、右端に-xを置き、最後に一度だけ累積する。",
+      "invariant": "区間の内側だけ、開始の+xが終了の-xより先に累積される。",
+      "complexity": "O(N+Q)時間、O(N)空間。",
+      "caution": "途中の問合せにはこのままでは対応できない。更新は0<=l<=r<=n。",
+      "api": "imos(n, updates)。updatesは(l,r,加算値)の列。",
+      "expected": "[0, 2, 3, 3, 1]",
+      "id": "imos",
+      "path": "library/imos.py",
+      "prefix": "acimos",
+      "original_sha256": "f17f0dec9f616b2931c85c12b16e4d01b75cd70b5dd1edbcf360db88802e5649",
+      "practice": [
+        {
+          "label": "鉄則本 A07",
+          "url": "https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_g"
+        },
+        {
+          "label": "ABC183 D",
+          "url": "https://atcoder.jp/contests/abc183/tasks/abc183_d"
+        }
+      ]
+    },
+    {
+      "title": "座標圧縮",
+      "level": "C相当",
+      "cue": "値が10^9などと大きいが、大小関係や一致だけが必要。",
+      "idea": "異なる値を整列し、小さい順の番号に置き換える。",
+      "invariant": "x<yならrank[x]<rank[y]、x=yなら番号も等しくなる。",
+      "complexity": "O(N log N)時間、O(N)空間。",
+      "caution": "距離は保存しない。面積・長さには元の座標差が必要。",
+      "api": "compress(a) -> (圧縮後の列, 番号から元の値へ戻す列)。",
+      "expected": "([2, 0, 2, 1], [-5, 7, 100])",
+      "id": "coordinate_compression",
+      "path": "library/coordinate_compression.py",
+      "prefix": "accoord",
+      "original_sha256": "d8d918ec9c6605e9d857d1c6477ce351c9c4346b99e479d4da99048d77377fac",
+      "practice": [
+        {
+          "label": "ABC036 C",
+          "url": "https://atcoder.jp/contests/abc036/tasks/abc036_c"
+        },
+        {
+          "label": "ABC213 C",
+          "url": "https://atcoder.jp/contests/abc213/tasks/abc213_c"
+        }
+      ]
+    },
+    {
+      "title": "bit全探索",
+      "level": "C相当",
+      "cue": "選ぶ・選ばないの2択がN個あり、Nが小さい。",
+      "idea": "maskのiビット目を、i番目の要素を選ぶかどうかに対応させる。",
+      "invariant": "0以上2^N未満の整数と部分集合が一対一に対応する。",
+      "complexity": "O(N 2^N)時間、補助空間O(1)。",
+      "caution": "この実装は空集合を含む。負数も可。Nが30以上だと単純全探索は重い。",
+      "api": "count_subset_sum(a,target) -> 合計がtargetになる部分集合の個数。",
+      "expected": "2",
+      "id": "bit_enumeration",
+      "path": "library/bit_enumeration.py",
+      "prefix": "acbit",
+      "original_sha256": "f71a6dd68b59940786f6d5568727116bf2624a1b2865f0f941c1753a904dab7f",
+      "practice": [
+        {
+          "label": "ABC128 C",
+          "url": "https://atcoder.jp/contests/abc128/tasks/abc128_c"
+        },
+        {
+          "label": "ABC147 C",
+          "url": "https://atcoder.jp/contests/abc147/tasks/abc147_c"
+        }
+      ]
+    },
+    {
+      "title": "GCD・約数列挙・素数のふるい",
+      "level": "C相当",
+      "cue": "公約数、割り切れる数、一定範囲の素数を知りたい。",
+      "idea": "約数dにはn//dが対になる。ふるいでは素数の倍数を消す。",
+      "invariant": "合成数には平方根以下の素因数があり、対応する段階で消える。",
+      "complexity": "gcd: O(log min(a,b))。約数: O(sqrt(n)+D log D)時間・O(D)空間。ふるい: O(N log log N)時間・O(N)空間。",
+      "caution": "divisorsはn>=1。sieveはn>=0。0の約数列挙は定義しない。",
+      "api": "gcd(a,b)、lcm(a,b)、divisors(n)、sieve(n) -> n以下の素数リスト。",
+      "expected": "6 36\n[1, 2, 3, 4, 6, 12]\n[2, 3, 5, 7, 11]",
+      "id": "number_theory",
+      "path": "library/number_theory.py",
+      "prefix": "acnum",
+      "original_sha256": "8245a7f79191f418493f10774b09b7ae558876c34cf81a8ada23583cb9aeda4f",
+      "practice": [
+        {
+          "label": "ABC118 C",
+          "url": "https://atcoder.jp/contests/abc118/tasks/abc118_c"
+        },
+        {
+          "label": "ABC180 C",
+          "url": "https://atcoder.jp/contests/abc180/tasks/abc180_c"
+        },
+        {
+          "label": "鉄則本 B26",
+          "url": "https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cy"
+        }
+      ]
+    },
+    {
+      "title": "区間の合併",
+      "level": "C相当",
+      "cue": "複数の区間を重なりのない区間にまとめたい。",
+      "idea": "左端で整列し、現在の右端まで届く区間をまとめ続ける。",
+      "invariant": "次の左端が現在の右端を越えたら、それ以降の区間とも結合できない。",
+      "complexity": "O(N log N)時間、O(N)空間。",
+      "caution": "l<=rの半開区間。空区間は除く。接する区間もまとめる設定。",
+      "api": "merge_intervals(intervals) -> [(l,r), ...]。",
+      "expected": "[(1, 8), (10, 11)]",
+      "id": "interval_merge",
+      "path": "library/interval_merge.py",
+      "prefix": "acmerge",
+      "original_sha256": "5934f8265a8111a754e0a437dce453d14fb0696a7c0ed1e7e062eb1679e54ab1",
+      "practice": [
+        {
+          "label": "ABC256 D",
+          "url": "https://atcoder.jp/contests/abc256/tasks/abc256_d"
+        },
+        {
+          "label": "ABC001 D",
+          "url": "https://atcoder.jp/contests/abc001/tasks/abc001_4"
+        }
+      ]
+    },
+    {
+      "title": "尺取り法",
+      "level": "D相当",
+      "cue": "非負の配列で、和がK以下の連続部分列を数えたい。",
+      "idea": "右端を一つ進め、和が大きすぎる間だけ左端を進める。",
+      "invariant": "非負なので左端を右へ動かすと和は増えない。有効な左端は連続する。",
+      "complexity": "O(N)時間、O(1)補助空間。",
+      "caution": "aの全要素が非負であること。負数があるなら累積和+辞書などを検討。空区間は数えない。",
+      "api": "count_sum_at_most(a,k)。",
+      "expected": "5",
+      "id": "two_pointers",
+      "path": "library/two_pointers.py",
+      "prefix": "actwo",
+      "original_sha256": "2132cb9977a59cf98d589724f6ff5c5b11d18e0baf4345a1e4561ffb7cbfd340",
+      "practice": [
+        {
+          "label": "ABC229 D",
+          "url": "https://atcoder.jp/contests/abc229/tasks/abc229_d"
+        },
+        {
+          "label": "ABC130 D",
+          "url": "https://atcoder.jp/contests/abc130/tasks/abc130_d"
+        }
+      ]
+    },
+    {
+      "title": "累積和＋辞書",
+      "level": "D相当",
+      "cue": "負数を含む配列で、和がちょうどKの連続部分列を数えたい。",
+      "idea": "p[r]-p[l]=Kをp[l]=p[r]-Kに変形し、過去の累積和を辞書に保存する。",
+      "invariant": "各右端で、条件を満たす左端の個数を重複なく加える。",
+      "complexity": "平均O(N)時間、O(N)空間。",
+      "caution": "初期値0を1個登録。現在の累積和を登録する前に答えを加算し、空区間を避ける。",
+      "api": "count_sum_equal(a,k)。",
+      "expected": "3",
+      "id": "prefix_hash",
+      "path": "library/prefix_hash.py",
+      "prefix": "acsumk",
+      "original_sha256": "8b4bc32b2338f08955d3854ecc221f7a2a53227185a8315a99e5164a1ad8f2b0",
+      "practice": [
+        {
+          "label": "ABC233 D",
+          "url": "https://atcoder.jp/contests/abc233/tasks/abc233_d"
+        },
+        {
+          "label": "ABC105 D",
+          "url": "https://atcoder.jp/contests/abc105/tasks/abc105_d"
+        }
+      ]
+    },
+    {
+      "title": "BFS・多始点BFS",
+      "level": "D相当",
+      "cue": "全ての移動コストが同じ最短距離。複数の出発点から最寄りの距離。",
+      "idea": "キューで距離が小さい順に処理する。多始点は全始点を距離0で入れる。",
+      "invariant": "初めて発見した頂点の距離が最短。先に短い距離の頂点を全て調べているため。",
+      "complexity": "O(V+E)時間、O(V)補助空間。",
+      "caution": "重み付きにはDijkstra等を使う。未到達は-1。gridは長方形で#を壁とする。",
+      "api": "bfs(graph,sources) -> 距離。grid_bfs(grid,start) -> 四近傍距離。",
+      "expected": "[0, 1, 2, -1]",
+      "id": "bfs",
+      "path": "library/bfs.py",
+      "prefix": "acbfs",
+      "original_sha256": "d5113a1abad5bc3148f0c8cae549e960c8bf6acfaac52bbf87d4b28674a5c594",
+      "practice": [
+        {
+          "label": "ABC007 C",
+          "url": "https://atcoder.jp/contests/abc007/tasks/abc007_3"
+        },
+        {
+          "label": "ABC168 D",
+          "url": "https://atcoder.jp/contests/abc168/tasks/abc168_d"
+        }
+      ]
+    },
+    {
+      "title": "DFS・連結成分・木の帰りがけ順",
+      "level": "D相当",
+      "cue": "到達可能性、無向グラフのまとまり、子から親への計算。",
+      "idea": "スタックで探索し、発見時に訪問済みにする。木では探索順を逆転して子を先に処理する。",
+      "invariant": "各頂点を一度だけ発見する。木の探索順では親が子より先なので逆順では逆になる。",
+      "complexity": "O(V+E)時間、O(V)補助空間。",
+      "caution": "componentsは無向グラフ用。tree_orderは空でない連結な木専用。再帰を使わない。",
+      "api": "components(graph) -> 成分番号。tree_order(graph,root) -> (親配列,親が先の順序)。",
+      "expected": "[0, 0, 1, 1, 2]",
+      "id": "dfs",
+      "path": "library/dfs.py",
+      "prefix": "acdfs",
+      "original_sha256": "cfa9525b3a31a88514a0445ed609f37a27ea20fa644783a07dbbe32416847993",
+      "practice": [
+        {
+          "label": "ATC001 A",
+          "url": "https://atcoder.jp/contests/atc001/tasks/dfs_a"
+        },
+        {
+          "label": "ABC284 C",
+          "url": "https://atcoder.jp/contests/abc284/tasks/abc284_c"
+        }
+      ]
+    },
+    {
+      "title": "Union-Find / DSU",
+      "level": "D相当",
+      "cue": "辺を追加しながら、同じ連結成分か・成分サイズを知りたい。",
+      "idea": "各集合を根で表し、小さい木を大きい木に繋ぐ。探索時に根までの道を短縮する。",
+      "invariant": "同じ根を持つ頂点が同じ集合。結合は二つの集合を一つにする。",
+      "complexity": "初期化O(N)。Q回の操作は合計O((N+Q) α(N))、空間O(N)。",
+      "caution": "通常のDSUで辺の削除はできない。頂点は0..n-1。",
+      "api": "DSU(n)。merge(a,b)は併合したらTrue、same(a,b)、size(a)、leader(a)。",
+      "expected": "True 3 False",
+      "id": "union_find",
+      "path": "library/union_find.py",
+      "prefix": "acuf",
+      "original_sha256": "0472c26602dd6923c4bd47e1736922aa9b3000b07d484c683b8c183dbafaf5ce",
+      "practice": [
+        {
+          "label": "ACL Practice A",
+          "url": "https://atcoder.jp/contests/practice2/tasks/practice2_a"
+        },
+        {
+          "label": "ABC177 D",
+          "url": "https://atcoder.jp/contests/abc177/tasks/abc177_d"
+        }
+      ]
+    },
+    {
+      "title": "ヒープ・上位K個の維持",
+      "level": "D相当",
+      "cue": "追加される値のうち、大きい方からK個の合計を常に知りたい。",
+      "idea": "採用したK個を最小ヒープに入れ、最小の採用値より大きい値だけ交換する。",
+      "invariant": "未採用の値は常に採用値の最小値以下。交換後も上位K個が残る。",
+      "complexity": "追加O(log(K+1))、問合せO(1)、空間O(K)。",
+      "caution": "要素がK未満なら全要素を採用。負数も含めて個数を優先する。削除は扱わない。",
+      "api": "TopK(k).add(x)、.total。heapqは最小ヒープ。",
+      "expected": "8",
+      "id": "heap",
+      "path": "library/heap.py",
+      "prefix": "acheap",
+      "original_sha256": "a5a19e786bcc2300bf57958f493707ccbc001903a89c84c5a3a0e788a0481502",
+      "practice": [
+        {
+          "label": "鉄則本 A53",
+          "url": "https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ba"
+        },
+        {
+          "label": "ABC062 D",
+          "url": "https://atcoder.jp/contests/abc062/tasks/arc074_b"
+        }
+      ]
+    },
+    {
+      "title": "貪欲法・区間スケジューリング",
+      "level": "D相当",
+      "cue": "重ならない区間を最大個数選びたい。各区間の価値は等しい。",
+      "idea": "終了が早い区間から選び、次の開始が前の終了以降なら採用する。",
+      "invariant": "最適解の先頭を最も早く終わる区間へ置き換えても、後続を邪魔しない。",
+      "complexity": "O(N log N)時間、O(N)空間。",
+      "caution": "l<rの半開区間。端点で接してよい。重み付きの最大価値にはこの貪欲は使えない。",
+      "api": "schedule(intervals) -> 採用する区間の列。",
+      "expected": "[(1, 2), (2, 4)]",
+      "id": "interval_greedy",
+      "path": "library/interval_greedy.py",
+      "prefix": "acgreedy",
+      "original_sha256": "018d9c4c0088c8cb0b8d827981840458a5e5432ef3af0b9ba4b2aeac8de0ee49",
+      "practice": [
+        {
+          "label": "鉄則本 A39",
+          "url": "https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_bn"
+        },
+        {
+          "label": "KEYENCE2020 B",
+          "url": "https://atcoder.jp/contests/keyence2020/tasks/keyence2020_b"
+        }
+      ]
+    },
+    {
+      "title": "動的計画法・0/1ナップサック",
+      "level": "D相当",
+      "cue": "各品物を一度まで使い、重量上限内で価値を最大化する。",
+      "idea": "dp[w]を容量w以内の最大価値とする。品物を使う・使わないで更新。",
+      "invariant": "容量を降順に処理すれば、参照元は今回の品物をまだ使っていない状態。",
+      "complexity": "O(NW)時間、O(W)空間。",
+      "caution": "重量は非負整数、W>=0。空選択可。昇順更新は同じ品物を再利用してしまう（重さ>0の場合）。",
+      "api": "knapsack(items,capacity)。itemsは(重量,価値)の列。",
+      "expected": "7",
+      "id": "knapsack",
+      "path": "library/knapsack.py",
+      "prefix": "acknap",
+      "original_sha256": "f8098f69486fc8125ffd62a2c85ec024b8c9202c4334e507934b2d164ff5a6eb",
+      "practice": [
+        {
+          "label": "EDPC D",
+          "url": "https://atcoder.jp/contests/dp/tasks/dp_d"
+        },
+        {
+          "label": "EDPC E",
+          "url": "https://atcoder.jp/contests/dp/tasks/dp_e"
+        }
+      ]
+    },
+    {
+      "title": "Dijkstra法",
+      "level": "E相当",
+      "cue": "非負の重みを持つグラフで、一つの始点からの最短距離。",
+      "idea": "暫定距離が最小の頂点をヒープから取り出し、その先の距離を改善する。",
+      "invariant": "辺が非負なら、未処理の遠い頂点を経由して確定距離が短くなることはない。",
+      "complexity": "O(V+(V+E) log(E+2))時間、O(V+E)補助空間。",
+      "caution": "負辺は不可。未到達はfloat(\"inf\")。ヒープの古い距離を読み飛ばす。",
+      "api": "dijkstra(graph,start)。graph[v]は(行先,重み)の列。",
+      "expected": "[0, 3, 1]",
+      "id": "dijkstra",
+      "path": "library/dijkstra.py",
+      "prefix": "acdijkstra",
+      "original_sha256": "c5cbc6d46bcade4985e31f82669ca1486c3b045994d579912a431f587d383e2b",
+      "practice": [
+        {
+          "label": "ABC340 D",
+          "url": "https://atcoder.jp/contests/abc340/tasks/abc340_d"
+        },
+        {
+          "label": "ABC035 D",
+          "url": "https://atcoder.jp/contests/abc035/tasks/abc035_d"
+        }
+      ]
+    },
+    {
+      "title": "トポロジカルソート・DAG上のDP",
+      "level": "E相当",
+      "cue": "依存関係の順序、循環の検出、有向非巡回グラフでの最長路。",
+      "idea": "入次数0の頂点から取り除く。その順でDPを更新する。",
+      "invariant": "入次数0なら未処理の前提は残っていない。全頂点を取り出せなければ閉路がある。",
+      "complexity": "O(V+E)時間、O(V)補助空間。",
+      "caution": "有向グラフ用。longest_pathは辺数の最大値で、空グラフは0。閉路時はValueError。",
+      "api": "topological_sort(graph) -> 順序またはNone。longest_path(graph)。",
+      "expected": "2",
+      "id": "topological_sort",
+      "path": "library/topological_sort.py",
+      "prefix": "actopo",
+      "original_sha256": "d4153affe5685ba44e53f2a6937e1ac55efb5a1f4de70ca3e7734869c1c69798",
+      "practice": [
+        {
+          "label": "EDPC G",
+          "url": "https://atcoder.jp/contests/dp/tasks/dp_g"
+        },
+        {
+          "label": "ABC223 D",
+          "url": "https://atcoder.jp/contests/abc223/tasks/abc223_d"
+        }
+      ]
+    },
+    {
+      "title": "最長増加部分列 / LIS",
+      "level": "E相当",
+      "cue": "順序を保って要素を選び、狭義増加する列を最長にしたい。",
+      "idea": "長さごとに末尾の最小値だけを残す。末尾が小さいほど後で伸ばしやすい。",
+      "invariant": "tails[i]は長さi+1の増加部分列の最小末尾。二分探索で置換しても達成長は失わない。",
+      "complexity": "O(N log(N+1))時間、O(N)空間。",
+      "caution": "同値を伸ばさない狭義増加。非減少ならbisect_rightに変更。tailsそのものは復元解とは限らない。",
+      "api": "lis_length(a) -> 長さ。",
+      "expected": "3",
+      "id": "lis",
+      "path": "library/lis.py",
+      "prefix": "aclis",
+      "original_sha256": "89605949daebbd6407d6f651744f571306fe713c42428b0342f7426ddd250e88",
+      "practice": [
+        {
+          "label": "鉄則本 A24",
+          "url": "https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_x"
+        },
+        {
+          "label": "ABC006 D",
+          "url": "https://atcoder.jp/contests/abc006/tasks/abc006_4"
+        }
+      ]
+    },
+    {
+      "title": "Fenwick Tree / BIT・転倒数",
+      "level": "E相当",
+      "cue": "一点加算と区間和を繰り返す。自分より大きい過去の値の個数を数える。",
+      "idea": "2の冪に沿った部分和を保持する。転倒数は圧縮した値の頻度をBITに入れて数える。",
+      "invariant": "prefix(r)は互いに重ならないブロックで[0,r)を分解する。",
+      "complexity": "初期化O(N)、更新・和O(log N)、空間O(N)。転倒数O(N log(N+1))。",
+      "caution": "外部添字は0始まり、内部だけ1始まり。同値は転倒に数えない。",
+      "api": "Fenwick(n).add(i,x)、prefix(r)、sum(l,r)。inversions(a)。",
+      "expected": "3",
+      "id": "fenwick_tree",
+      "path": "library/fenwick_tree.py",
+      "prefix": "acbitree",
+      "original_sha256": "23777f8a3ca1e6243e170305bc9e4e4b97fe0e06fd467b1d9ea49c432a2f977b",
+      "practice": [
+        {
+          "label": "ACL Practice B",
+          "url": "https://atcoder.jp/contests/practice2/tasks/practice2_b"
+        },
+        {
+          "label": "ABC190 F",
+          "url": "https://atcoder.jp/contests/abc190/tasks/abc190_f"
+        }
+      ]
+    },
+    {
+      "title": "セグメント木",
+      "level": "E相当",
+      "cue": "一点更新と区間の最小・最大・和などを繰り返す。",
+      "idea": "区間を二分した木を作り、問合せ区間をO(log N)個の節点に分解する。",
+      "invariant": "各節点が子区間のopを保持する。結合則により分割位置が変わっても結果は同じ。",
+      "complexity": "構築O(N)、更新・問合せO(log N)、空間O(N)。opがO(1)のとき。",
+      "caution": "opは結合的、eは単位元。交換則は不要。区間更新はGの遅延セグ木へ。",
+      "api": "SegTree(a,op,e).set(i,x)、prod(l,r)。例: 和はop=lambda a,b:a+b、e=0。",
+      "expected": "2\n7",
+      "id": "segment_tree",
+      "path": "library/segment_tree.py",
+      "prefix": "acseg",
+      "original_sha256": "bf558b8d728d03dfb06dc0ca83526d10d50f7fae09f3cd71ff6dfbfd0ff7fea3",
+      "practice": [
+        {
+          "label": "ABC185 F",
+          "url": "https://atcoder.jp/contests/abc185/tasks/abc185_f"
+        },
+        {
+          "label": "ACL Practice J",
+          "url": "https://atcoder.jp/contests/practice2/tasks/practice2_j"
+        }
+      ]
+    },
+    {
+      "title": "組合せ・階乗・逆元",
+      "level": "E相当",
+      "cue": "nCrを同じ素数modで何度も求める。",
+      "idea": "階乗と逆階乗を前計算し、n!/(r!(n-r)!)を掛け算で求める。",
+      "invariant": "素数pでpの倍数でないxにはx^(p-2)が逆元になる。",
+      "complexity": "前計算O(N+log p)、問合せO(1)、空間O(N)。",
+      "caution": "pは素数、0<=N<pが必須。素数判定はしない。N>=pや合成数modには流用不可。",
+      "api": "Combinations(N,mod).choose(n,r)。0<=n<=N、範囲外のrは0。",
+      "expected": "10",
+      "id": "combinations",
+      "path": "library/combinations.py",
+      "prefix": "accomb",
+      "original_sha256": "f023dd287f992bae13250e025e1a582cba66192512778d625facb4b8a7cf21d7",
+      "practice": [
+        {
+          "label": "ABC145 D",
+          "url": "https://atcoder.jp/contests/abc145/tasks/abc145_d"
+        },
+        {
+          "label": "ABC151 E",
+          "url": "https://atcoder.jp/contests/abc151/tasks/abc151_e"
+        }
+      ]
+    },
+    {
+      "title": "半分全列挙",
+      "level": "E相当",
+      "cue": "Nが約40で2^Nは大きすぎるが2^(N/2)なら持てる。",
+      "idea": "左右半分の部分和を列挙し、片側を整列して相方を二分探索する。",
+      "invariant": "全ての部分集合は左右それぞれの部分集合の組として一意に表せる。",
+      "complexity": "O(N 2^(N/2))時間、O(2^(N/2))空間（奇数Nは切上げ側）。",
+      "caution": "負数も可。空集合も含む。Pythonでは2^20個程度でもメモリ量に注意。",
+      "api": "subset_sums(a)、count_subset_sum(a,target)。",
+      "expected": "2",
+      "id": "meet_in_middle",
+      "path": "library/meet_in_middle.py",
+      "prefix": "acmitm",
+      "original_sha256": "f24b5d3db14b794689c9692d3121a91004db77ac9aab98ca2c40fbbfb5917927",
+      "practice": [
+        {
+          "label": "ABC184 F",
+          "url": "https://atcoder.jp/contests/abc184/tasks/abc184_f"
+        },
+        {
+          "label": "典型90 051",
+          "url": "https://atcoder.jp/contests/typical90/tasks/typical90_ay"
+        }
+      ]
+    },
+    {
+      "title": "bit DP・巡回セールスマン",
+      "level": "E相当",
+      "cue": "訪問済み集合と現在位置で未来が決まり、Nが小さい。",
+      "idea": "dp[mask][v]を集合maskを訪れvにいる最小費用とする。未訪問頂点へ伸ばす。",
+      "invariant": "最後に追加した頂点を外すと必ず小さいmaskの状態へ戻るので全候補を漸化式で覆う。",
+      "complexity": "O(N^2 2^N)時間、O(N 2^N)空間。",
+      "caution": "0始点で全頂点を一度ずつ訪れ0へ戻る。有向も可、欠辺はinf。N=0,1は移動なしで0。",
+      "api": "tsp(cost) -> 最小巡回費用またはinf。costはN×N。",
+      "expected": "9",
+      "id": "bit_dp",
+      "path": "library/bit_dp.py",
+      "prefix": "actsp",
+      "original_sha256": "cde27e330184bf18ad868907c29dacd8362070280ba3a508c1341117208c95cc",
+      "practice": [
+        {
+          "label": "ABC180 E",
+          "url": "https://atcoder.jp/contests/abc180/tasks/abc180_e"
+        },
+        {
+          "label": "EDPC O",
+          "url": "https://atcoder.jp/contests/dp/tasks/dp_o"
+        }
+      ]
+    },
+    {
+      "title": "0-1 BFS",
+      "level": "F相当",
+      "cue": "辺の重みが0か1だけの最短路。",
+      "idea": "重み0の改善はdequeの先頭、重み1は末尾に入れる。",
+      "invariant": "deque内の有効な距離が小さい順に処理され、Dijkstraと同じ確定順を保てる。",
+      "complexity": "O(V+E)時間、O(V+E)補助空間。",
+      "caution": "0と1以外の重みは不可。未到達はinf。距離付きキューで古い候補を読み飛ばす。",
+      "api": "zero_one_bfs(graph,start)。graph[v]は(行先,0または1)。",
+      "expected": "[0, 0, 0]",
+      "id": "zero_one_bfs",
+      "path": "library/zero_one_bfs.py",
+      "prefix": "ac01bfs",
+      "original_sha256": "0394f0f43bfdb8382c49309568c5ee0038d97aec9cbb67cf0c9c08bbda5876ac",
+      "practice": [
+        {
+          "label": "ABC176 D",
+          "url": "https://atcoder.jp/contests/abc176/tasks/abc176_d"
+        },
+        {
+          "label": "典型90 043",
+          "url": "https://atcoder.jp/contests/typical90/tasks/typical90_aq"
+        }
+      ]
+    },
+    {
+      "title": "Warshall-Floyd法",
+      "level": "F相当",
+      "cue": "頂点数が小さく、全頂点間の最短距離が必要。",
+      "idea": "途中で使える頂点を0,1,...と増やし、i→k→jを検討する。",
+      "invariant": "kを追加した最短路は、kを使わないか、i→kとk→jの二つに分かれる。",
+      "complexity": "O(V^3)時間、O(V^2)空間。",
+      "caution": "負辺可。負閉路がある場合は最短距離として使えず、d[v][v]<0で検出できる。Pythonの大規模入力は重い。",
+      "api": "floyd_warshall(n,edges,directed=True)。edgesは(u,v,w)、未到達inf。",
+      "expected": "[0, 4, 2]",
+      "id": "floyd_warshall",
+      "path": "library/floyd_warshall.py",
+      "prefix": "acfloyd",
+      "original_sha256": "eaa3f0ec7c6c920a8c50b2cd977416c21e7d6518906b6cbb1a8d3f9b6cb3da0f",
+      "practice": [
+        {
+          "label": "ABC079 D",
+          "url": "https://atcoder.jp/contests/abc079/tasks/abc079_d"
+        },
+        {
+          "label": "ABC012 D",
+          "url": "https://atcoder.jp/contests/abc012/tasks/abc012_4"
+        }
+      ]
+    },
+    {
+      "title": "最小全域木・Kruskal法",
+      "level": "F相当",
+      "cue": "無向グラフの全頂点を最小費用で連結したい。",
+      "idea": "重みの小さい辺から、異なる連結成分を結ぶものだけ採用する。",
+      "invariant": "ある成分を横切る最小の辺を採用しても、最適な全域木へ交換できる（カット性質）。",
+      "complexity": "O(V+E log(E+1))時間、O(V+E)空間。",
+      "caution": "負辺・多重辺可。非連結なら最小全域森になる。戻り値の辺数がn-1か確認する。",
+      "api": "kruskal(n,edges) -> (合計費用,採用辺)。edgesは(u,v,w)。",
+      "expected": "3",
+      "id": "kruskal",
+      "path": "library/kruskal.py",
+      "prefix": "ackruskal",
+      "original_sha256": "df51b8647f59f4807918acd4a40d27e754bcf4c934d2cebc1dae17c3ca2a4077",
+      "practice": [
+        {
+          "label": "鉄則本 A67",
+          "url": "https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bo"
+        },
+        {
+          "label": "ABC065 D",
+          "url": "https://atcoder.jp/contests/abc065/tasks/arc076_b"
+        }
+      ]
+    },
+    {
+      "title": "ダブリング・LCA",
+      "level": "F相当",
+      "cue": "木の祖先へ何段も跳ぶ、二頂点の共通祖先や距離を何度も求める。",
+      "idea": "2^k段上の祖先を前計算し、深さを合わせてから大きい跳躍順で二頂点を近づける。",
+      "invariant": "二頂点の祖先が異なる間だけ同じ段数を上ると、最後にLCAの直下で止まる。",
+      "complexity": "構築O(N log N)、各問合せO(log N)、空間O(N log N)。",
+      "caution": "空でない連結な無向木。ancestor(v,k)はk>=0、根を越えると-1。distanceは辺数。",
+      "api": "LCA(graph,root=0).lca(u,v)、ancestor(v,k)、distance(u,v)。",
+      "expected": "0 3 1",
+      "id": "doubling_lca",
+      "path": "library/doubling_lca.py",
+      "prefix": "aclca",
+      "original_sha256": "59192f53722464508db6fe2d1fecda4eaa3d43ac65016be5126ffea101e07b1b",
+      "practice": [
+        {
+          "label": "鉄則本 A57",
+          "url": "https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_be"
+        },
+        {
+          "label": "ABC014 D",
+          "url": "https://atcoder.jp/contests/abc014/tasks/abc014_4"
+        }
+      ]
+    },
+    {
+      "title": "木DP・独立集合の数え上げ",
+      "level": "F相当",
+      "cue": "木で隣り合う頂点を同時に選ばない選び方を数える。",
+      "idea": "dp[v][0/1]をvを選ばない/選ぶ場合の部分木の通り数にする。",
+      "invariant": "木では子の部分木同士に辺がない。vの状態を固定すれば、子ごとの選択数を掛けられる。",
+      "complexity": "O(N)時間、O(N)空間。",
+      "caution": "連結な無向木、mod>=1。空集合も数える。空グラフは1通り。一般グラフには流用不可。",
+      "api": "independent_sets(graph,mod=1000000007)。",
+      "expected": "5",
+      "id": "tree_dp",
+      "path": "library/tree_dp.py",
+      "prefix": "actreedp",
+      "original_sha256": "6539783cf686389b261095d3c8d6894030bf76c24f3ef27e794d75a84f5ab917",
+      "practice": [
+        {
+          "label": "EDPC P",
+          "url": "https://atcoder.jp/contests/dp/tasks/dp_p"
+        },
+        {
+          "label": "ABC287 F",
+          "url": "https://atcoder.jp/contests/abc287/tasks/abc287_f"
+        }
+      ]
+    },
+    {
+      "title": "桁DP",
+      "level": "F相当",
+      "cue": "非常に大きいN以下の整数で、桁に関する条件を満たす数を数える。",
+      "idea": "上位桁から、N未満になったかと桁和の剰余を状態として更新する。",
+      "invariant": "各整数は先頭ゼロで桁数を揃えた表現を一つだけ持ち、tightが上限超過を防ぐ。",
+      "complexity": "L桁、剰余DとしてO(10LD)時間、O(D)空間。",
+      "caution": "非負整数の十進文字列、D>=1、mod>=1。0は最後に除き、1..Nを数える。",
+      "api": "count_digit_sum_multiple(bound,divisor,mod=1000000007)。",
+      "expected": "6",
+      "id": "digit_dp",
+      "path": "library/digit_dp.py",
+      "prefix": "acdigitdp",
+      "original_sha256": "465d96ae1cda7981ebef71a8e321ee165865a5cef2b0f43978c3a47e255f23df",
+      "practice": [
+        {
+          "label": "EDPC S",
+          "url": "https://atcoder.jp/contests/dp/tasks/dp_s"
+        },
+        {
+          "label": "ABC154 E",
+          "url": "https://atcoder.jp/contests/abc154/tasks/abc154_e"
+        }
+      ]
+    },
+    {
+      "title": "区間DP・隣接併合",
+      "level": "F相当",
+      "cue": "隣り合う二つを併合し、併合後の重さを費用として全体を一つにする。",
+      "idea": "最後の併合で分かれる境界kを全て試す。区間が短い順に計算する。",
+      "invariant": "最後の直前は[l,k)と[k,r)の二塊。その二つの最適解に区間和を足せば全候補を覆う。",
+      "complexity": "O(N^3)時間、O(N^2)空間。",
+      "caution": "隣接併合専用。N=0,1なら0。全ての組から選ぶ併合問題とは別。大規模には最適化が必要。",
+      "api": "merge_cost(a) -> 最小総費用。",
+      "expected": "90",
+      "id": "interval_dp",
+      "path": "library/interval_dp.py",
+      "prefix": "acintervaldp",
+      "original_sha256": "d5c984f1e4736bea3657fa70ed8926e3d7fb7ff5d52ff2ce555ca197247176cf",
+      "practice": [
+        {
+          "label": "EDPC N",
+          "url": "https://atcoder.jp/contests/dp/tasks/dp_n"
+        },
+        {
+          "label": "典型90 019",
+          "url": "https://atcoder.jp/contests/typical90/tasks/typical90_s"
+        }
+      ]
+    },
+    {
+      "title": "Z algorithm・文字列の前方一致",
+      "level": "F相当",
+      "cue": "文字列の各位置から、先頭と何文字一致するかを全部求めたい。",
+      "idea": "既知の一致区間[l,r)の情報を再利用し、区間外だけ新しく比較する。",
+      "invariant": "区間内は先頭の対応位置と一致する。追加比較で右端rは単調に進む。",
+      "complexity": "O(N)時間、O(N)空間。",
+      "caution": "空列は[]、非空ではz[0]=N。文字列以外の比較可能な列でも可。",
+      "api": "z_algorithm(s) -> 各suffixとsの最長共通接頭辞の長さ。",
+      "expected": "[7, 1, 0, 0, 3, 1, 0]",
+      "id": "z_algorithm",
+      "path": "library/z_algorithm.py",
+      "prefix": "acz",
+      "original_sha256": "f3b24210eebbecfb17b3891e5925289d71d1b6f1b49a2a6ffde5b0348772c3d5",
+      "practice": [
+        {
+          "label": "ABC141 E",
+          "url": "https://atcoder.jp/contests/abc141/tasks/abc141_e"
+        },
+        {
+          "label": "ABC150 F",
+          "url": "https://atcoder.jp/contests/abc150/tasks/abc150_f"
+        }
+      ]
+    },
+    {
+      "title": "強連結成分分解 / SCC",
+      "level": "G相当",
+      "cue": "有向グラフの相互到達できる頂点を一つにまとめたい。",
+      "idea": "元グラフの帰りがけ順を取り、逆順に逆グラフを探索する（Kosaraju法）。",
+      "invariant": "最初の探索の終了順により、逆グラフでは未処理の別成分へ漏れずに一成分を取り出せる。",
+      "complexity": "O(V+E)時間、O(V+E)空間。",
+      "caution": "成分番号は縮約DAGのトポロジカル順。異成分の辺v→uではid[v]<id[u]。無向の成分分解とは違う。",
+      "api": "scc(graph) -> (各頂点の成分番号, 成分ごとの頂点リスト)。",
+      "expected": "[0, 0, 1, 1]",
+      "id": "scc",
+      "path": "library/scc.py",
+      "prefix": "acscc",
+      "original_sha256": "2836916867f86474c26c8efc1b2eda9972e5f51b8aa1ce16037e2d9460e9e5e1",
+      "practice": [
+        {
+          "label": "ACL Practice G",
+          "url": "https://atcoder.jp/contests/practice2/tasks/practice2_g"
+        },
+        {
+          "label": "典型90 021",
+          "url": "https://atcoder.jp/contests/typical90/tasks/typical90_u"
+        }
+      ]
+    },
+    {
+      "title": "2-SAT",
+      "level": "G相当",
+      "cue": "真偽変数への「条件Aまたは条件B」という二つまでの選択制約。",
+      "idea": "A∨Bを「¬AならB」「¬BならA」の含意辺へ変換し、SCCで矛盾を検出する。",
+      "invariant": "xと¬xが同じSCCなら互いを強制して矛盾。異なれば縮約DAGの順序から割当を作れる。",
+      "complexity": "変数N、節MとしてO(N+M)時間・空間。",
+      "caution": "節は2リテラルまで。3-SATには使えない。このSCC実装の成分順に依存して割当を作る。",
+      "api": "two_sat(n,clauses) -> bool列またはNone。節(i,f,j,g)は(x_i==f) OR (x_j==g)。",
+      "expected": "[True]",
+      "id": "two_sat",
+      "path": "library/two_sat.py",
+      "prefix": "ac2sat",
+      "original_sha256": "703b2a7d688c25a44b33fbde076b4ea59de8f7a9836d7aa7c10a2bd235d415e7",
+      "practice": [
+        {
+          "label": "ACL Practice H",
+          "url": "https://atcoder.jp/contests/practice2/tasks/practice2_h"
+        },
+        {
+          "label": "ABC210 F",
+          "url": "https://atcoder.jp/contests/abc210/tasks/abc210_f"
+        }
+      ]
+    },
+    {
+      "title": "遅延セグメント木・区間加算と区間和",
+      "level": "G相当",
+      "cue": "区間全体への加算と区間和の問合せを交互に行う。",
+      "idea": "子へ渡していない加算をlazyに保存し、子を調べる直前だけ配る。",
+      "invariant": "各節点のsumは、その区間への全加算を反映済み。lazyは子へ未反映の分だけを持つ。",
+      "complexity": "構築O(N)、区間更新・問合せO(log N)、空間O(N)。",
+      "caution": "ここでは加算と和に特化。代入・affine変換ではlazyの合成順や区間長の扱いを別に設計する。",
+      "api": "RangeAddSum(a).add(l,r,x)、sum(l,r)。再帰の深さはO(log N)。",
+      "expected": "10",
+      "id": "lazy_segment_tree",
+      "path": "library/lazy_segment_tree.py",
+      "prefix": "aclazy",
+      "original_sha256": "db34a88ce26ac43a829e60c95d79fdbc9db814d59c38356fc64d18222280f2bd",
+      "practice": [
+        {
+          "label": "典型90 029",
+          "url": "https://atcoder.jp/contests/typical90/tasks/typical90_ac"
+        },
+        {
+          "label": "ACL Practice K",
+          "url": "https://atcoder.jp/contests/practice2/tasks/practice2_k"
+        }
+      ]
+    },
+    {
+      "title": "全方位木DP・全頂点からの距離和",
+      "level": "G相当",
+      "cue": "根を変えたときの答えを、全頂点について求めたい。",
+      "idea": "まず0からの距離和と部分木サイズを計算し、根を隣へ移した差分を伝える。",
+      "invariant": "親vから子uへ根を移すと、u側size[u]個は1近づき、残りは1遠ざかる。",
+      "complexity": "O(N)時間、O(N)空間。",
+      "caution": "連結な無向・重みなしの木。一般の全方位木DPでは除外計算用のprefix/suffixも設計する。",
+      "api": "all_distance_sums(graph) -> 各頂点から全頂点への距離和。",
+      "expected": "[3, 2, 3]",
+      "id": "rerooting",
+      "path": "library/rerooting.py",
+      "prefix": "acreroot",
+      "original_sha256": "fd5df83fc109e2f5c4be9e09a9fa724a2d4f474ae51d5a7d0b0e604b9c9f4894",
+      "practice": [
+        {
+          "label": "ABC220 F",
+          "url": "https://atcoder.jp/contests/abc220/tasks/abc220_f"
+        },
+        {
+          "label": "EDPC V",
+          "url": "https://atcoder.jp/contests/dp/tasks/dp_v"
+        }
+      ]
+    },
+    {
+      "title": "Moのアルゴリズム・区間の種類数",
+      "level": "G相当",
+      "cue": "静的配列の区間問合せをまとめて受け取り、左右端を一つ動かす更新が安い。",
+      "idea": "左端をブロック分けし、右端順を交互に反転して問合せを並べる。",
+      "invariant": "保持中の区間の頻度を左右の追加・削除で正確に更新する。問合せ順の変更は答えを変えない。",
+      "complexity": "B≈sqrt(N)としてO(Q log Q + QB + N^2/B)時間、O(N+Q)空間。",
+      "caution": "オンライン問合せや途中の値変更にはこの実装は使えない。空区間可。値はハッシュ可能。",
+      "api": "distinct_queries(a,queries) -> 入力順の答え。queriesは(l,r)。",
+      "expected": "[2, 3, 0]",
+      "id": "mo",
+      "path": "library/mo.py",
+      "prefix": "acmo",
+      "original_sha256": "1d66f98bb01ebe12934a0155d2f7c184a722d18846fe42e97e4aa48d12b49f9e",
+      "practice": [
+        {
+          "label": "ABC174 F",
+          "url": "https://atcoder.jp/contests/abc174/tasks/abc174_f"
+        },
+        {
+          "label": "ABC242 G",
+          "url": "https://atcoder.jp/contests/abc242/tasks/abc242_g"
+        }
+      ]
+    },
+    {
+      "title": "行列累乗",
+      "level": "G相当",
+      "cue": "同じ線形遷移を非常に大きい回数繰り返す。固定長歩道の数え上げ。",
+      "idea": "状態遷移を行列にして、二乗を繰り返し指数のビットが1の分だけ掛ける。",
+      "invariant": "行列積は遷移の合成。結合則により累乗を二進数に分解できる。",
+      "complexity": "K×K行列をT乗: O(K^3 log(T+1))時間、O(K^2)空間。",
+      "caution": "正方行列、指数T>=0、mod>=1。行・列ベクトルの向きを統一する。Pythonの大きなKには重い。",
+      "api": "matmul(a,b,mod)、matpow(a,exponent,mod=1000000007)。",
+      "expected": "[[8, 5], [5, 3]]",
+      "id": "matrix_power",
+      "path": "library/matrix_power.py",
+      "prefix": "acmat",
+      "original_sha256": "6ef3160eb3ecf8280ea208fa42f59f69cc91a142c420756d8c5acd53fa2016aa",
+      "practice": [
+        {
+          "label": "EDPC R",
+          "url": "https://atcoder.jp/contests/dp/tasks/dp_r"
+        },
+        {
+          "label": "ABC293 E",
+          "url": "https://atcoder.jp/contests/abc293/tasks/abc293_e"
+        }
+      ]
+    },
+    {
+      "title": "最大流・最小カット / Dinic",
+      "level": "G相当",
+      "cue": "容量制約のある輸送量、選択の両立条件、最小カットへの帰着。",
+      "idea": "残余グラフでBFSの層を作り、層を一段進む道だけに流す。逆辺で以前の流れを取り消せる。",
+      "invariant": "残余のs→t路がなければ、sから到達できる集合のカット容量が流量に一致する。",
+      "complexity": "一般にO(V^2 E)時間、O(V+E)空間。",
+      "caution": "整数の非負容量、s!=t。flowは残余容量を変更し、追加で流れた量を返す。深いDFSも反復で処理。",
+      "api": "Dinic(n).add_edge(u,v,cap)、flow(s,t)、min_cut(s) -> 到達可否。",
+      "expected": "3",
+      "id": "max_flow",
+      "path": "library/max_flow.py",
+      "prefix": "acflow",
+      "original_sha256": "97a48bce6c0bbf749cc8b393332f5dd7df79df5c83d54f6c3a20b46977974ca4",
+      "practice": [
+        {
+          "label": "鉄則本 A68",
+          "url": "https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bp"
+        },
+        {
+          "label": "ABC010 D",
+          "url": "https://atcoder.jp/contests/abc010/tasks/abc010_4"
+        }
+      ]
+    },
+    {
+      "title": "二部マッチング・増加路",
+      "level": "G相当",
+      "cue": "人と仕事のように二種類の集合間で、一対一の割当を最大にする。",
+      "idea": "未割当の左頂点から、未使用辺と使用辺を交互に辿り、空いた右頂点を探す。",
+      "invariant": "増加路の使用・未使用を反転するとマッチ数が1増える。増加路がなければ最大。",
+      "complexity": "左L、右RとしてO(L(L+R+E))時間、O(L+R)補助空間。",
+      "caution": "二部グラフ専用。一般グラフにはBlossom等が必要。大規模にはHopcroft-Karpを検討。",
+      "api": "matching(graph,right_size) -> (個数,各左頂点の相手)。graphは左→右の隣接リスト、未割当-1。",
+      "expected": "3",
+      "id": "bipartite_matching",
+      "path": "library/bipartite_matching.py",
+      "prefix": "acmatching",
+      "original_sha256": "2f9e9260e579ae551ee0a6e1f03e101718ce013dcb463fcbf34328ee044edd53",
+      "practice": [
+        {
+          "label": "鉄則本 A69",
+          "url": "https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bq"
+        },
+        {
+          "label": "ACL Practice D",
+          "url": "https://atcoder.jp/contests/practice2/tasks/practice2_d"
+        }
+      ]
+    },
+    {
+      "title": "NTT・畳み込み",
+      "level": "それ以上",
+      "cue": "二列の係数積c[k]=Σa[i]b[k-i]や、和ごとの組合せ数を高速に求めたい。",
+      "idea": "998244353上の原始根を使って評価値へ変換し、点ごとに掛けて逆変換する。",
+      "invariant": "評価点では多項式積が点ごとの積になる。逆変換が元の係数を復元する。",
+      "complexity": "必要な2冪長をLとしてO(L log L)時間、O(L)空間。",
+      "caution": "modは998244353固定。必要長<=2^23。整数そのままの畳み込みではなくmodを取った結果。Pythonの最大長実行は非現実的。",
+      "api": "convolution(a,b) -> 長さlen(a)+len(b)-1の係数。空列を含むと[]。",
+      "expected": "[4, 13, 22, 15]",
+      "id": "ntt",
+      "path": "library/ntt.py",
+      "prefix": "acntt",
+      "original_sha256": "2088bafb825fbc2a0790267678b9bfdf203c555c2cec9ef1fa0c76221f7edc94",
+      "practice": [
+        {
+          "label": "ACL Practice F",
+          "url": "https://atcoder.jp/contests/practice2/tasks/practice2_f"
+        },
+        {
+          "label": "典型90 065",
+          "url": "https://atcoder.jp/contests/typical90/tasks/typical90_bm"
+        }
+      ]
+    },
+    {
+      "title": "最小費用流・ポテンシャル",
+      "level": "それ以上",
+      "cue": "容量だけでなく費用のある輸送・割当で、所定量を最安で流したい。",
+      "idea": "残余グラフの最短路へ流す。ポテンシャルで辺の費用を非負に変換しDijkstraを使う。",
+      "invariant": "ポテンシャル差はs→t経路で一定なので最短路を保つ。逆辺により過去の割当を修正できる。",
+      "complexity": "増加回数AとしてO(A(V+(V+E) log(E+2)))時間、O(V+E)空間。整数容量ならA<=要求流量。",
+      "caution": "元の辺の費用・容量は非負整数、s!=t。この実装は負費用の元辺に非対応。未達の場合は実際に流せた量を返す。",
+      "api": "min_cost_flow(n,edges,s,t,limit) -> (流量,総費用)。edgesは(u,v,容量,単位費用)。毎回新規計算。",
+      "expected": "(3, 15)",
+      "id": "min_cost_flow",
+      "path": "library/min_cost_flow.py",
+      "prefix": "acmcf",
+      "original_sha256": "c55afd5b9bbca69eea137ceb30d3d42aae0ed3c504e6145f95f090eb3480e7f7",
+      "practice": [
+        {
+          "label": "ACL Practice E",
+          "url": "https://atcoder.jp/contests/practice2/tasks/practice2_e"
+        },
+        {
+          "label": "ABC247 G",
+          "url": "https://atcoder.jp/contests/abc247/tasks/abc247_g"
+        }
+      ]
+    },
+    {
+      "title": "Heavy-Light Decomposition / 重軽分解",
+      "level": "それ以上",
+      "cue": "木の二頂点間の経路に対し、値の更新や集約を繰り返す。",
+      "idea": "最大部分木の子へ続く重い道を連続添字にし、経路を少数の区間へ分ける。",
+      "invariant": "軽い辺を下ると部分木サイズが半分未満になるため、経路中の軽い辺はO(log N)本。",
+      "complexity": "この実装: 構築O(N log N)、一点加算O(log N)、経路和O(log^2 N)、空間O(N)。",
+      "caution": "空でない連結な無向木。頂点の値を足す。非可換演算や辺の値には向き・LCAの扱いを変更する。",
+      "api": "HLDPathSum(graph,values).add(v,x)、path_sum(u,v)。両端の頂点も含む。",
+      "expected": "10\n20",
+      "id": "hld",
+      "path": "library/hld.py",
+      "prefix": "achld",
+      "original_sha256": "5b991ce90195bdf80e61b5179753b6574ad4b5e327e755a46b74ea928bc2453f",
+      "practice": [
+        {
+          "label": "ABC294 G",
+          "url": "https://atcoder.jp/contests/abc294/tasks/abc294_g"
+        },
+        {
+          "label": "典型90 035",
+          "url": "https://atcoder.jp/contests/typical90/tasks/typical90_ai"
+        }
+      ]
+    },
+    {
+      "title": "Li Chao Tree・直線の最小値",
+      "level": "それ以上",
+      "cue": "dp[i]=min_j(a[j]*x[i]+b[j])のように、直線を追加して点で最小値を聞く。",
+      "idea": "各区間の中央で良い直線を保存し、負けた直線が勝つ可能性のある片側へ下ろす。",
+      "invariant": "二直線の上下関係は一度しか入れ替わらない。中央で負けた側は高々一方の子でしか改善しない。",
+      "complexity": "座標M個: 準備O(M log M)、直線追加・問合せO(log(M+1))、空間O(M)。",
+      "caution": "問合せ座標を事前に全て渡す離散版。任意の曲線には使えない。直線がなければinf。",
+      "api": "LiChao(xs).add_line(a,b)、query(x)。xは初期xs内の値。",
+      "expected": "[-3, 1, 1]",
+      "id": "li_chao_tree",
+      "path": "library/li_chao_tree.py",
+      "prefix": "aclichao",
+      "original_sha256": "c5d44ceea9769e4b75242d379079def5bb47944c83eee80a1c68541a7f9f7734",
+      "practice": [
+        {
+          "label": "EDPC Z",
+          "url": "https://atcoder.jp/contests/dp/tasks/dp_z"
+        },
+        {
+          "label": "ABC289 G",
+          "url": "https://atcoder.jp/contests/abc289/tasks/abc289_g"
+        }
+      ]
+    },
+    {
+      "title": "Rollback Union-Find",
+      "level": "それ以上",
+      "cue": "探索の枝を戻るときに連結状態も巻き戻したい。オフライン動的連結性の部品。",
+      "idea": "併合前の親とサイズを履歴に保存し、snapshotの長さまで逆順に戻す。",
+      "invariant": "各併合で書き換えた二つのセルを元へ戻すと、その直前の集合分割に完全に戻る。",
+      "complexity": "leader/merge O(log N)、snapshot O(1)、rollbackは取り消す併合数O(K)、空間O(N+履歴)。",
+      "caution": "経路圧縮をしない。snapshotは現在の履歴の祖先だけに戻せる。任意の辺削除を直接処理する構造ではない。",
+      "api": "RollbackDSU(n).merge(a,b)、same(a,b)、snapshot()、rollback(token)。",
+      "expected": "True\nFalse",
+      "id": "rollback_dsu",
+      "path": "library/rollback_dsu.py",
+      "prefix": "acrollback",
+      "original_sha256": "f1dbd085ea805374f2d02fad3ce41bdd9f773c5ba5460c50b968373a513a9b13",
+      "practice": [
+        {
+          "label": "ABC302 Ex",
+          "url": "https://atcoder.jp/contests/abc302/tasks/abc302_h"
+        },
+        {
+          "label": "AGC002 D",
+          "url": "https://atcoder.jp/contests/agc002/tasks/agc002_d"
+        }
+      ]
+    },
+    {
+      "title": "部分集合ゼータ変換・Möbius反転 / SOS DP",
+      "level": "それ以上",
+      "cue": "全maskについて、その部分集合の重みの総和を求めたい。",
+      "idea": "ビットを一つずつ処理し、そのビットを落としたmaskの値を足す。逆変換は引く。",
+      "invariant": "処理済みビットだけ自由に選ぶ部分集合の和を保持し、最後に全ビットが自由になる。",
+      "complexity": "Bビット、配列長N=2^BとしてO(B 2^B)時間、O(2^B)空間。",
+      "caution": "長さは正の2冪。ここでは整数の和。単なる部分集合の総和と部分集合畳み込みは別。",
+      "api": "subset_zeta(a)、subset_mobius(a)。元配列を変更せず新しいリストを返す。",
+      "expected": "[1, 3, 4, 10]\n[1, 2, 3, 4]",
+      "id": "sos_dp",
+      "path": "library/sos_dp.py",
+      "prefix": "acsos",
+      "original_sha256": "ae20c50f4f340d18e969bf3e4d6643f59a36631df1132e798dd0282503beb960",
+      "practice": [
+        {
+          "label": "ARC100 E",
+          "url": "https://atcoder.jp/contests/arc100/tasks/arc100_c"
+        },
+        {
+          "label": "ABC349 F",
+          "url": "https://atcoder.jp/contests/abc349/tasks/abc349_f"
+        }
+      ]
+    },
+    {
+      "title": "Suffix Array・LCP",
+      "level": "それ以上",
+      "cue": "接尾辞の辞書順、繰り返す部分文字列、異なる部分文字列の数。",
+      "idea": "長さkの順位の組から長さ2kの順位を作る。LCPは前の一致長を1減らして再利用する。",
+      "invariant": "接尾辞の先頭2k文字の比較は、前半k文字と後半k文字の順位の辞書順で決まる。",
+      "complexity": "このdoubling実装はO(N log^2(N+1))時間・O(N)空間。LCPはO(N)。",
+      "caution": "SA-ISの線形実装ではない。空文字対応。Unicode文字もPythonの比較順で扱う。大規模には高速実装が必要。",
+      "api": "suffix_array(s)、lcp_array(s,sa)。lcp[i]はsa[i]とsa[i+1]の一致長。",
+      "expected": "[5, 3, 1, 0, 4, 2]\n[1, 3, 0, 0, 2]",
+      "id": "suffix_array",
+      "path": "library/suffix_array.py",
+      "prefix": "acsa",
+      "original_sha256": "e70b10bf30e3e451dca805366c44b81edecbe0b69dfa97673947add4573991cf",
+      "practice": [
+        {
+          "label": "ACL Practice I",
+          "url": "https://atcoder.jp/contests/practice2/tasks/practice2_i"
+        },
+        {
+          "label": "ABC213 F",
+          "url": "https://atcoder.jp/contests/abc213/tasks/abc213_f"
+        }
+      ]
+    },
+    {
+      "title": "凸包・単調鎖法",
+      "level": "それ以上",
+      "cue": "平面上の点集合を囲む最小の凸多角形の頂点が必要。",
+      "idea": "点を辞書順に整列し、左折を保つように下側・上側の境界を積む。",
+      "invariant": "右折や一直線の中間点は凸包の極端な頂点になれないので取り除ける。",
+      "complexity": "O(N log N)時間、O(N)空間。",
+      "caution": "整数座標を想定。辺上の中間点は除く。全て一直線なら両端だけ。浮動小数点では誤差の設計が別途必要。",
+      "api": "convex_hull(points) -> 反時計回りの頂点列。始点は末尾に重複しない。cross(o,a,b)は外積。",
+      "expected": "[(0, 0), (2, 0), (2, 2), (0, 2)]",
+      "id": "convex_hull",
+      "path": "library/convex_hull.py",
+      "prefix": "achull",
+      "original_sha256": "025782790c834cad2ba0fd93e6e80be3ddace24848849b8648e7b1dbd558ae5d",
+      "practice": [
+        {
+          "label": "ABC022 D",
+          "url": "https://atcoder.jp/contests/abc022/tasks/abc022_d"
+        },
+        {
+          "label": "典型90 041",
+          "url": "https://atcoder.jp/contests/typical90/tasks/typical90_ao"
+        }
+      ]
+    }
+  ]
+}
