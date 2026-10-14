@@ -1,3 +1,4 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
 # Suffix Array・LCP
 # 条件: SA-ISの線形実装ではない。空文字対応。Unicode文字もPythonの比較順で扱う。大規模には高速実装が必要。
 # 計算量: このdoubling実装はO(N log^2(N+1))時間・O(N)空間。LCPはO(N)。

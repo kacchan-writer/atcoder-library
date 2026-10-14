@@ -1,3 +1,4 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
 # 二部マッチング・増加路
 # 条件: 二部グラフ専用。一般グラフにはBlossom等が必要。大規模にはHopcroft-Karpを検討。
 # 計算量: 左L、右RとしてO(L(L+R+E))時間、O(L+R)補助空間。

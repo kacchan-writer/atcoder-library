@@ -1,3 +1,4 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
 # トポロジカルソート・DAG上のDP
 # 条件: 有向グラフ用。longest_pathは辺数の最大値で、空グラフは0。閉路時はValueError。
 # 計算量: O(V+E)時間、O(V)補助空間。

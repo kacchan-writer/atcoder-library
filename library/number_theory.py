@@ -1,3 +1,4 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
 # GCD・約数列挙・素数のふるい
 # 条件: divisorsはn>=1。sieveはn>=0。0の約数列挙は定義しない。
 # 計算量: gcd: O(log min(a,b))。約数: O(sqrt(n)+D log D)時間・O(D)空間。ふるい: O(N log log N)時間・O(N)空間。

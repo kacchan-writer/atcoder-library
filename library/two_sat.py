@@ -1,3 +1,5 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# 閲覧した参考仕様: https://atcoder.github.io/ac-library/master/document_ja/twosat.html
 # 2-SAT
 # 条件: 節は2リテラルまで。3-SATには使えない。このSCC実装の成分順に依存して割当を作る。
 # 計算量: 変数N、節MとしてO(N+M)時間・空間。

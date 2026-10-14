@@ -1,3 +1,4 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
 # Heavy-Light Decomposition / 重軽分解
 # 条件: 空でない連結な無向木。頂点の値を足す。非可換演算や辺の値には向き・LCAの扱いを変更する。
 # 計算量: この実装: 構築O(N log N)、一点加算O(log N)、経路和O(log^2 N)、空間O(N)。

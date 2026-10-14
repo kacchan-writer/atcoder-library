@@ -1,0 +1,432 @@
+{
+  "scope": "All 48 library modules; original creation tool calls and generated code; no exhaustive web similarity search",
+  "generator_recovered_from_ai_tool_calls": true,
+  "generator_sha256": "afe11c6ef4060cf2eeb72620eeabe25ec3ec1534fbaa6f152310efab937dcff3",
+  "generation_events": [
+    {
+      "log_line": 59,
+      "timestamp_utc": "2026-10-12T06:23:23.236Z"
+    },
+    {
+      "log_line": 66,
+      "timestamp_utc": "2026-10-12T06:26:28.726Z"
+    },
+    {
+      "log_line": 75,
+      "timestamp_utc": "2026-10-12T06:28:45.888Z"
+    },
+    {
+      "log_line": 82,
+      "timestamp_utc": "2026-10-12T06:32:28.977Z"
+    },
+    {
+      "log_line": 102,
+      "timestamp_utc": "2026-10-12T06:38:54.651Z"
+    }
+  ],
+  "matched_module_count": 48,
+  "modules": [
+    {
+      "path": "library/prefix_sum.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "3d4a427baff4753461fcaf01711e4b17bc65dbdbfd83fb6ca2ea447e42e9a967",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/frequency.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "f7ac4196d97ff85b31d80ff9260aff754cabbed15fd7954bf25b619cde810ea8",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/binary_search.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "351265384522df8eae137850b04e59101ec8f44ed431cfaaacfb434b026f6f90",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null,
+      "local_reference": {
+        "description": "Pre-existing local ok/ng binary-search template",
+        "original_author": "unverified",
+        "creation_method": "unverified",
+        "original_external_url": null
+      }
+    },
+    {
+      "path": "library/imos.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "0847c05ddfdd383a912a3bbef3bd73b54bd9f23dceb3290806f14367de0a715b",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/coordinate_compression.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "705288137a3f819334686676c9fd52eeaf7c27f9fa366fa2db6e6b3627c3799b",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/bit_enumeration.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "660f2f4b3f6c69385a375ffb29e3fbe868b6d8934a67232d09189ada239c3589",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/number_theory.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "96b54325cc5858ac9fc8ea0c17a881be99be53ec7f72472881a27f6b5d5f5147",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/interval_merge.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "232fadd107643a0355589149b821074956899fdf7dd789750a15254e0a066a0f",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/two_pointers.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "d1e4fdf27da330f46537320047f8c1169870a614fbf478cd663d1eafcd9978fe",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/prefix_hash.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "0005e82d1cdf6f7ae676abb4b2e12a3fa5622fcbe6c33938994446e319064d43",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/bfs.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "7298212e9c035cc359cc0a1a9bbce2a92fe771862b42e5d5ea8c67ec644d6f82",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/dfs.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "4ec1af8cc53a12c5bf771e51c6ec07e3acd8ef8fc44b22b1ff9f484423212488",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/union_find.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "b76f16c9354909129dce908db97439dc247c5689b84070328e501fd55ee3bd67",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/heap.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "7a8296ca65473b3dc581f0d6e6f60c380f520eed64defc8c730d4714332e90b5",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/interval_greedy.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "3545e5617dc17fd96b0b7d2435c62f7ff5201bee12e7e7dff6875446e298ae86",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/knapsack.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "ed2995c97133c494bf5c86dd5ee685e6811b00ade131c6bd905fe291fbcaf5b7",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/dijkstra.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "89b75e937f90d3d1e9b4a03efc95fe9b5c977f6988a289d229b2b5ba9fdd27db",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/topological_sort.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "6fdae9d74e0d240d921faa2019b1d7557efefb1f5ef3aa6f27725ab739f5f8a0",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/lis.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "3e8648397e74314ccabd0946d33e2d11d97fe1c2cb419eef5cabd0632a506d12",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/fenwick_tree.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "c99337947c583e392b5929a1ce7da2396f64b3974d4e25065165caa5af11aebc",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/segment_tree.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "6810638d10e13486c5cd846ccb0646c968487384d282c02a90e4c00f0a4da24b",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/combinations.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "303244addcafb47eabf546fc821e2c70cd06ca4f0ad88c53eaf121d3d0fc085b",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/meet_in_middle.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "acd480fb4f7b2818d73994d62acf74d0f9921055d726632209b3e51e6d9e3f72",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/bit_dp.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "2fd9d55dd38d583476e655daa8251e95f7665c213e95ecc69c97bffff85fc3c0",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/zero_one_bfs.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "6cf81f110065341e0b5333b35e09418311ac7492df023fd4506e083b9f0ccc8c",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/floyd_warshall.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "fcb0f373ac1a0f38c32c2e25f4b3d7d51d85052db74e9338051178cbe461e196",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/kruskal.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "81c12e5bfcc2975965fa2439c96c2aab8e49e47449ec8d1b017e4ca0dd95c2af",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/doubling_lca.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "d0e59b55d521e1f4e9610370cdabbeebb59e970158bc53bc96685d0259e1a67f",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/tree_dp.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "a88d5f889496ca20d7de903d2441cff7c9b257320dc38b4662ded5313236aec6",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/digit_dp.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "56934d91b753abc348e8fa6ed600326905b6cd10bc06de8772e4a71841703741",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/interval_dp.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "18b7b9504b113e8b3919bab1651d1deb049513d433c1d78719bd7fa4aac8eb6c",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/z_algorithm.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "17876c3bdc3adc5dfd42870f418703cbfe8a6ed4b6841fe7fb2a8a6910ec0138",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/scc.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "9f1d8200caa7fa638ed024e669081b0f3ca03ac523bdf36dd67601c9158717a7",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/two_sat.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "00081faf2731cd143c01a2cdc81bf6d3bbe9e211fc89a9bcc4e3787420ce41c0",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": "https://atcoder.github.io/ac-library/master/document_ja/twosat.html"
+    },
+    {
+      "path": "library/lazy_segment_tree.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "a46502b20c398c375f88863695ee15dea63a9e4780328ce03afad1f56d779fee",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": "https://atcoder.github.io/ac-library/master/document_ja/lazysegtree.html"
+    },
+    {
+      "path": "library/rerooting.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "f32dbc8db9c3db50503537e361b4cd7eef273064607ce20851ddbc3bb4b18bbc",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/mo.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "92372e748f26fee60548f318b456300fb079c6de73e545d7d1dadfb778fd8fd7",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/matrix_power.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "264901e0c3dc36ac6cced286075ce5f085861c992fc2feff0e9470ddcd1d9325",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/max_flow.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "01933ad2370fae5a0afc105375d58ff9752557858603a65e75ee3f78c84f6d46",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": "https://atcoder.github.io/ac-library/master/document_ja/maxflow.html"
+    },
+    {
+      "path": "library/bipartite_matching.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "53c72ee4d665dfd388e0f4afec5ad2c12dbbb41417dd677ee2ce4b8fc700fb9c",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/ntt.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "9dd14bd49a6ee1822ba66e11e8642ebfd405c0bcbb6d45ae1c628b8c5e858d03",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": "https://atcoder.github.io/ac-library/master/document_ja/convolution.html"
+    },
+    {
+      "path": "library/min_cost_flow.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "ea3dfa0f9dca5901847c73de9183eaf612031d7c696c953bb45aa35bda9bf670",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/hld.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "65e6acb93fa3aafec9427032d6dcfa4d8d2c856cca14cc9e7e94e926bc69e3ea",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/li_chao_tree.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "65a1fa10abd6e46042aaed4a351f595d549bb5aa1b3e45fb748a53c0e12d5b31",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/rollback_dsu.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "46e2d5e59a3339b85b3a4413b71918fc05f654b7318eeeece8fcffa04bed1a2c",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/sos_dp.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "9321cf1f74b829caa4bad76a65b78806122ec1df82ed062dcd0a55f8632225fc",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/suffix_array.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "f8fca969ca9e878e7cace92f023e6f881d2d8a5e5942527c6ab1273c1fde00e4",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    },
+    {
+      "path": "library/convex_hull.py",
+      "ai_generated": true,
+      "generator_match": "AST identical including demonstration",
+      "source_sha256": "332e84dc04b4ea40af8510aabf5bbcee7c666b6c1bc7134ada7205a74b0552ba",
+      "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
+      "related_specification_viewed": null
+    }
+  ],
+  "review_date_jst": "2026-10-15",
+  "ai_tool": "OpenAI Codex",
+  "evidence_access": "Original private creation records reviewed locally; not published. This report is not independent public access to those records.",
+  "third_party_copy_assessment": "No explicit record identifying direct copying or translation of a particular third-party implementation was found in the reviewed creation records. Independence and uniqueness are not established.",
+  "task_level_references_viewed": [
+    "https://atcoder.github.io/ac-library/master/document_ja/index.html",
+    "https://atcoder.jp/contests/dp/tasks",
+    "https://atcoder.github.io/ac-library/master/document_ja/lazysegtree.html",
+    "https://atcoder.github.io/ac-library/master/document_ja/maxflow.html",
+    "https://atcoder.github.io/ac-library/master/document_ja/convolution.html",
+    "https://atcoder.github.io/ac-library/master/document_ja/twosat.html"
+  ]
+}

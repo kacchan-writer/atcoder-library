@@ -1,3 +1,4 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
 # BFS・多始点BFS
 # 条件: 重み付きにはDijkstra等を使う。未到達は-1。gridは長方形で#を壁とする。
 # 計算量: O(V+E)時間、O(V)補助空間。

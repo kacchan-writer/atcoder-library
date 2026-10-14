@@ -1,3 +1,4 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
 # Warshall-Floyd法
 # 条件: 負辺可。負閉路がある場合は最短距離として使えず、d[v][v]<0で検出できる。Pythonの大規模入力は重い。
 # 計算量: O(V^3)時間、O(V^2)空間。

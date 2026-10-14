@@ -1,3 +1,4 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
 # 最長増加部分列 / LIS
 # 条件: 同値を伸ばさない狭義増加。非減少ならbisect_rightに変更。tailsそのものは復元解とは限らない。
 # 計算量: O(N log(N+1))時間、O(N)空間。

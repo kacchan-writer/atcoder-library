@@ -70,6 +70,8 @@ def main():
                 assert committed == path.read_bytes()
             expanded = expand(snippet['body'])
             assert expanded.splitlines()[0] == '# Source: ' + expected_url
+            assert expanded.splitlines()[1] == f'# Provenance: https://github.com/kacchan-writer/atcoder-library/blob/{sha}/PROVENANCE.md'
+            assert '# AI生成: OpenAI Codex' in expanded
             assert isinstance(tree.body[-1], ast.If)
             assert ast.dump(tree.body[-1].test) == ast.dump(ast.parse('__name__ == "__main__"', mode='eval').body)
             expected_ast = ast.Module(body=tree.body[:-1], type_ignores=[])

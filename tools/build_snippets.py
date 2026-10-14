@@ -32,6 +32,8 @@ def main():
     assert re.fullmatch('[0-9a-f]{40}', sha)
     catalog_bytes = git('show', sha + ':catalog.json')
     assert catalog_bytes == (ROOT / 'catalog.json').read_bytes(), 'Commit catalog changes first'
+    provenance = git('show', sha + ':PROVENANCE.md')
+    assert provenance == (ROOT / 'PROVENANCE.md').read_bytes(), 'Commit provenance changes first'
     items = json.loads(catalog_bytes)['algorithms']
     snippets, manifest = {}, []
     prefixes = set()
@@ -46,7 +48,9 @@ def main():
         snippets[item['id']] = {
             'scope': 'python', 'prefix': prefix,
             'description': item['title'] + ' | ' + item['caution'],
-            'body': [escape('# Source: ' + url), *map(escape, code.splitlines()), '', '$0'],
+            'body': [escape('# Source: ' + url),
+                     escape('# Provenance: ' + REPO + '/blob/' + sha + '/PROVENANCE.md'),
+                     *map(escape, code.splitlines()), '', '$0'],
         }
         manifest.append({'id': item['id'], 'prefix': prefix, 'path': item['path'], 'source_url': url,
             'source_sha256': hashlib.sha256(source_bytes).hexdigest()})

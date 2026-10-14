@@ -1,3 +1,5 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# 閲覧した参考仕様: https://atcoder.github.io/ac-library/master/document_ja/lazysegtree.html
 # 遅延セグメント木・区間加算と区間和
 # 条件: ここでは加算と和に特化。代入・affine変換ではlazyの合成順や区間長の扱いを別に設計する。
 # 計算量: 構築O(N)、区間更新・問合せO(log N)、空間O(N)。

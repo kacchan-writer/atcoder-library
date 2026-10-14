@@ -1,3 +1,4 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
 # Fenwick Tree / BIT・転倒数
 # 条件: 外部添字は0始まり、内部だけ1始まり。同値は転倒に数えない。
 # 計算量: 初期化O(N)、更新・和O(log N)、空間O(N)。転倒数O(N log(N+1))。

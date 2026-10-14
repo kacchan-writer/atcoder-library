@@ -1,3 +1,4 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
 # Union-Find / DSU
 # 条件: 通常のDSUで辺の削除はできない。頂点は0..n-1。
 # 計算量: 初期化O(N)。Q回の操作は合計O((N+Q) α(N))、空間O(N)。

@@ -1,3 +1,5 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# 閲覧した参考仕様: https://atcoder.github.io/ac-library/master/document_ja/convolution.html
 # NTT・畳み込み
 # 条件: modは998244353固定。必要長<=2^23。整数そのままの畳み込みではなくmodを取った結果。Pythonの最大長実行は非現実的。
 # 計算量: 必要な2冪長をLとしてO(L log L)時間、O(L)空間。

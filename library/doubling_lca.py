@@ -1,3 +1,4 @@
+# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
 # ダブリング・LCA
 # 条件: 空でない連結な無向木。ancestor(v,k)はk>=0、根を越えると-1。distanceは辺数。
 # 計算量: 構築O(N log N)、各問合せO(log N)、空間O(N log N)。
