@@ -9,6 +9,16 @@ Pythonの典型アルゴリズム48種と、出典URLを自動挿入するVS Cod
 2. `.py` ファイルの行頭で `acuf` などを入力し、`Ctrl+Space` で候補を選びます。
 3. `editor.tabCompletion` を `onlySnippets` にすると、呼出名の後に `Tab` でも展開できます。
 
+JSON形式の `.code-workspace` を使っている場合は、次のコマンドでも導入できます。
+最初の作業フォルダにスニペットを配置し、Tab展開を設定します。既存ファイルを変更する場合はバックアップします。
+
+```sh
+python tools/install_snippets.py --workspace-file /path/to/AtCoder.code-workspace
+```
+
+フォルダを直接開いている場合は `--folder /path/to/project` を指定してください（この場合は設定を変更しません）。
+[VS Code公式スニペットガイド](https://code.visualstudio.com/docs/editing/userdefinedsnippets)
+
 例えば `acuf` で出典コメントと `DSU` の定義を展開した後、下に `uf = DSU(N)` と書いて使います。
 `acbfs` はBFS、`acseg` はセグメント木、`acbs` は二分探索です。
 スニペットは各ファイルの関数・クラス・importを挿入します。末尾の実行例は挿入しません。
@@ -101,7 +111,8 @@ python -B tests/verify.py --snippets
 
 前者は48個のデモ・全探索などの独立な小規模参照解・境界ケース・2500頂点の構造チェックを行います。
 後者は実際のスニペットを復元して同じ参照解と照合し、公開コードとの一致・参照コミットを確認します。
-結果は [docs/validation.json](docs/validation.json) に記録します。
+今回の公開版の検証結果は [docs/validation.json](docs/validation.json) に記録しています。
+再実行時の結果は `.validation/source.json` と `.validation/snippets.json` に保存されます。
 AtCoderへの提出・ACや各問題の最大制約での速度は未確認です。
 とくにNTT、Mo、2-SAT、遅延セグメント木などはPythonでの実行時間・メモリを別途判断してください。
 実装は独自のPython教材由来で、公式AC Libraryと同一のAPI・性能ではありません。
