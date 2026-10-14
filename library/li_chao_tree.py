@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # Li Chao Tree・直線の最小値
 # 条件: 問合せ座標を事前に全て渡す離散版。任意の曲線には使えない。直線がなければinf。
 # 計算量: 座標M個: 準備O(M log M)、直線追加・問合せO(log(M+1))、空間O(M)。

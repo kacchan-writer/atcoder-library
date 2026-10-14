@@ -30,7 +30,7 @@
       "path": "library/prefix_sum.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "3d4a427baff4753461fcaf01711e4b17bc65dbdbfd83fb6ca2ea447e42e9a967",
+      "source_sha256": "9234e8d9012ceb957f9f1ce31eb07fb236e1260e77a04f5c1edfe7a7f7f32dbb",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -38,7 +38,7 @@
       "path": "library/frequency.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "f7ac4196d97ff85b31d80ff9260aff754cabbed15fd7954bf25b619cde810ea8",
+      "source_sha256": "bd07e6e018578aa60f937da2c0b137a6864962574b5802685e187133a3b17400",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -46,7 +46,7 @@
       "path": "library/binary_search.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "351265384522df8eae137850b04e59101ec8f44ed431cfaaacfb434b026f6f90",
+      "source_sha256": "047ce17d9b8e4f73ebb1355fa33422cfecf67ee5f5205981d38517a7898f53d0",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null,
       "local_reference": {
@@ -60,7 +60,7 @@
       "path": "library/imos.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "0847c05ddfdd383a912a3bbef3bd73b54bd9f23dceb3290806f14367de0a715b",
+      "source_sha256": "61c7c315c066aae3ee3a580e0c4429e021bd4ee439e7159cff27d3b47bb2fd84",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -68,7 +68,7 @@
       "path": "library/coordinate_compression.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "705288137a3f819334686676c9fd52eeaf7c27f9fa366fa2db6e6b3627c3799b",
+      "source_sha256": "c7f1a3bb4cf18d1b5c99cc2b0593fcdb972a45a182dd88a396d96609f2da2acd",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -76,7 +76,7 @@
       "path": "library/bit_enumeration.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "660f2f4b3f6c69385a375ffb29e3fbe868b6d8934a67232d09189ada239c3589",
+      "source_sha256": "ba2a750114aaa0c0f3d1a68c93e769466540f838ac1e8dc70794353ee5fcd5dd",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -84,7 +84,7 @@
       "path": "library/number_theory.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "96b54325cc5858ac9fc8ea0c17a881be99be53ec7f72472881a27f6b5d5f5147",
+      "source_sha256": "f14b1ab7c49e89063f63b5f4bbd4d9b4d6858548f9a29b0968de42da31f8f150",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -92,7 +92,7 @@
       "path": "library/interval_merge.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "232fadd107643a0355589149b821074956899fdf7dd789750a15254e0a066a0f",
+      "source_sha256": "111f2f50a5a655e4cc07a66e92b827255ba6ad5507fe3bd6dac6ca28bbb698c9",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -100,7 +100,7 @@
       "path": "library/two_pointers.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "d1e4fdf27da330f46537320047f8c1169870a614fbf478cd663d1eafcd9978fe",
+      "source_sha256": "43d6bf67149ccdd5409d87712ec6048bfc4337030bfd9fc924a9a937325c9b8f",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -108,7 +108,7 @@
       "path": "library/prefix_hash.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "0005e82d1cdf6f7ae676abb4b2e12a3fa5622fcbe6c33938994446e319064d43",
+      "source_sha256": "1786392a197f48c6bbe76964768dfb7d8e48e6d107925127709e615168ceacca",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -116,7 +116,7 @@
       "path": "library/bfs.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "7298212e9c035cc359cc0a1a9bbce2a92fe771862b42e5d5ea8c67ec644d6f82",
+      "source_sha256": "e10e4160d839021a517862ce6a864bfaf85a697fd5d3de07a652c5ad1cf78fcc",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -124,7 +124,7 @@
       "path": "library/dfs.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "4ec1af8cc53a12c5bf771e51c6ec07e3acd8ef8fc44b22b1ff9f484423212488",
+      "source_sha256": "a6be01730ba2b633f1be5c08d8215afedd07c4830724f030e34eacd0463505aa",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -132,7 +132,7 @@
       "path": "library/union_find.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "b76f16c9354909129dce908db97439dc247c5689b84070328e501fd55ee3bd67",
+      "source_sha256": "ec486228ff70aa2058c07f1bb09c2168deac62a11dfa31fd2c19d73d1cedd199",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -140,7 +140,7 @@
       "path": "library/heap.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "7a8296ca65473b3dc581f0d6e6f60c380f520eed64defc8c730d4714332e90b5",
+      "source_sha256": "c214028f7deaa6933a0a44f824f15a2942f697214226b2fa8793e4ad1398bce8",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -148,7 +148,7 @@
       "path": "library/interval_greedy.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "3545e5617dc17fd96b0b7d2435c62f7ff5201bee12e7e7dff6875446e298ae86",
+      "source_sha256": "8a3d02f25ef448ae0da85a72783099bb9f0e8610ce274eb796f93beb52cc32d7",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -156,7 +156,7 @@
       "path": "library/knapsack.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "ed2995c97133c494bf5c86dd5ee685e6811b00ade131c6bd905fe291fbcaf5b7",
+      "source_sha256": "7c5f62bddc77de71ac4ee4ad3328d4e8a8c4e4987dd995f50e91d8064540859a",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -164,7 +164,7 @@
       "path": "library/dijkstra.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "89b75e937f90d3d1e9b4a03efc95fe9b5c977f6988a289d229b2b5ba9fdd27db",
+      "source_sha256": "a978e72e92d412a4a87567da4c7499f6c50af68cb55f91e7dba47e241b0654db",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -172,7 +172,7 @@
       "path": "library/topological_sort.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "6fdae9d74e0d240d921faa2019b1d7557efefb1f5ef3aa6f27725ab739f5f8a0",
+      "source_sha256": "89edd721d9536025433800aee3ea40631c9ce3c981b0549b023206a9877ee9b7",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -180,7 +180,7 @@
       "path": "library/lis.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "3e8648397e74314ccabd0946d33e2d11d97fe1c2cb419eef5cabd0632a506d12",
+      "source_sha256": "d97803f28b300a116ed0755b8f1c39ca7e87658f5e8df5c37009aba982b264fc",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -188,7 +188,7 @@
       "path": "library/fenwick_tree.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "c99337947c583e392b5929a1ce7da2396f64b3974d4e25065165caa5af11aebc",
+      "source_sha256": "c78488a5afbd478472910e5186ee0b53569b809c6207036eda306596776a8899",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -196,7 +196,7 @@
       "path": "library/segment_tree.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "6810638d10e13486c5cd846ccb0646c968487384d282c02a90e4c00f0a4da24b",
+      "source_sha256": "06a9291018b5a1f11748a5ccfed544662796937a806566312b8c380d7f0d8ccf",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -204,7 +204,7 @@
       "path": "library/combinations.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "303244addcafb47eabf546fc821e2c70cd06ca4f0ad88c53eaf121d3d0fc085b",
+      "source_sha256": "49fb9946720bcf4f0d1d6aa1e788d08950d9c5bfac97e7abb76e864fdfdec34e",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -212,7 +212,7 @@
       "path": "library/meet_in_middle.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "acd480fb4f7b2818d73994d62acf74d0f9921055d726632209b3e51e6d9e3f72",
+      "source_sha256": "33a83e890736b8ebe7e1dfd46f1be85078b4a1da0e6b184d8b8a95c4dcf74c0d",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -220,7 +220,7 @@
       "path": "library/bit_dp.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "2fd9d55dd38d583476e655daa8251e95f7665c213e95ecc69c97bffff85fc3c0",
+      "source_sha256": "c8aa5666da084e867451cdd419de8bd309ad7af34a2512686d37b6ae58e96a45",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -228,7 +228,7 @@
       "path": "library/zero_one_bfs.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "6cf81f110065341e0b5333b35e09418311ac7492df023fd4506e083b9f0ccc8c",
+      "source_sha256": "f736e9e04fad42e50070fc1e9c5818be4e5a101e177d0ea6825946757fd93413",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -236,7 +236,7 @@
       "path": "library/floyd_warshall.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "fcb0f373ac1a0f38c32c2e25f4b3d7d51d85052db74e9338051178cbe461e196",
+      "source_sha256": "9266b0f455ea0a8365309ecc86c827953b4ffb76708ed5f057b8dfb7e81ec227",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -244,7 +244,7 @@
       "path": "library/kruskal.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "81c12e5bfcc2975965fa2439c96c2aab8e49e47449ec8d1b017e4ca0dd95c2af",
+      "source_sha256": "8be707103bbc78291d4d1a44b92ab5daef71e22a5bc4994872bb081f30fe2528",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -252,7 +252,7 @@
       "path": "library/doubling_lca.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "d0e59b55d521e1f4e9610370cdabbeebb59e970158bc53bc96685d0259e1a67f",
+      "source_sha256": "98f853a310cdb854fa372de2f4a7a7f6c126800f05f636ca6702f86a47cb79c0",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -260,7 +260,7 @@
       "path": "library/tree_dp.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "a88d5f889496ca20d7de903d2441cff7c9b257320dc38b4662ded5313236aec6",
+      "source_sha256": "b1462914f093573dd3ba8a7ba483aff7ad2aa413d1ba3ef7af3f47187e61c379",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -268,7 +268,7 @@
       "path": "library/digit_dp.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "56934d91b753abc348e8fa6ed600326905b6cd10bc06de8772e4a71841703741",
+      "source_sha256": "5719dff4d2503fe7d3d852b3f8f8526be864c38a3f8708557b27e81f25dd8f86",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -276,7 +276,7 @@
       "path": "library/interval_dp.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "18b7b9504b113e8b3919bab1651d1deb049513d433c1d78719bd7fa4aac8eb6c",
+      "source_sha256": "44c496ee8bb254b5f13965f90d783c5b3c96f93ec151d69af0882e2591b4713c",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -284,7 +284,7 @@
       "path": "library/z_algorithm.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "17876c3bdc3adc5dfd42870f418703cbfe8a6ed4b6841fe7fb2a8a6910ec0138",
+      "source_sha256": "a76d951ccd89a18521bfb93bf5b273d00fca7495dfd4e0a1822441524c321674",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -292,7 +292,7 @@
       "path": "library/scc.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "9f1d8200caa7fa638ed024e669081b0f3ca03ac523bdf36dd67601c9158717a7",
+      "source_sha256": "c2fb87dedd7a1ec085b794f81660f12f4ed8b4c3c68966177bf23b5e10b2c386",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -300,7 +300,7 @@
       "path": "library/two_sat.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "00081faf2731cd143c01a2cdc81bf6d3bbe9e211fc89a9bcc4e3787420ce41c0",
+      "source_sha256": "619625ef5e31145bca6764304d296e4cfd737f72e157423163ebcaa32aaf3fea",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": "https://atcoder.github.io/ac-library/master/document_ja/twosat.html"
     },
@@ -308,7 +308,7 @@
       "path": "library/lazy_segment_tree.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "a46502b20c398c375f88863695ee15dea63a9e4780328ce03afad1f56d779fee",
+      "source_sha256": "d0f7f4d1e8d55a7220e1aae51d796503d4dbd38b70f49a2b8a60437ea97b6065",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": "https://atcoder.github.io/ac-library/master/document_ja/lazysegtree.html"
     },
@@ -316,7 +316,7 @@
       "path": "library/rerooting.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "f32dbc8db9c3db50503537e361b4cd7eef273064607ce20851ddbc3bb4b18bbc",
+      "source_sha256": "e8fa7b815ad0a0a5b48ce5c72edeb80711e279d74ddd89358f22adc821e132bb",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -324,7 +324,7 @@
       "path": "library/mo.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "92372e748f26fee60548f318b456300fb079c6de73e545d7d1dadfb778fd8fd7",
+      "source_sha256": "18d0fef75e04bed13debbf748fd0cad44d10864ea79e61d1272270d3404778ad",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -332,7 +332,7 @@
       "path": "library/matrix_power.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "264901e0c3dc36ac6cced286075ce5f085861c992fc2feff0e9470ddcd1d9325",
+      "source_sha256": "9cc7e619870da5a84e23830bcb8e10531214d13ac1b927011da36d3f47aa5ed8",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -340,7 +340,7 @@
       "path": "library/max_flow.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "01933ad2370fae5a0afc105375d58ff9752557858603a65e75ee3f78c84f6d46",
+      "source_sha256": "d4a9e0a15f06e0f74906b73349e21a6e9edae7a2c32a043d028f0e5551657bed",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": "https://atcoder.github.io/ac-library/master/document_ja/maxflow.html"
     },
@@ -348,7 +348,7 @@
       "path": "library/bipartite_matching.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "53c72ee4d665dfd388e0f4afec5ad2c12dbbb41417dd677ee2ce4b8fc700fb9c",
+      "source_sha256": "a668d7996a81ceaac43db5bfde231e14123fd3fb88cf81a4802e3c501439c78e",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -356,7 +356,7 @@
       "path": "library/ntt.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "9dd14bd49a6ee1822ba66e11e8642ebfd405c0bcbb6d45ae1c628b8c5e858d03",
+      "source_sha256": "77583212ff4a7c1293b50ef9f1a0de064efa4f57970eafafbfb4bea7afd01ef4",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": "https://atcoder.github.io/ac-library/master/document_ja/convolution.html"
     },
@@ -364,7 +364,7 @@
       "path": "library/min_cost_flow.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "ea3dfa0f9dca5901847c73de9183eaf612031d7c696c953bb45aa35bda9bf670",
+      "source_sha256": "a9a01b3b6a1c4c2fbc78171ac5d65dc21b797c47417efaa6e2995ae8a485eb14",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -372,7 +372,7 @@
       "path": "library/hld.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "65e6acb93fa3aafec9427032d6dcfa4d8d2c856cca14cc9e7e94e926bc69e3ea",
+      "source_sha256": "f8d4d81b8c8f306a99cb405cf7532cccc468da7ff878e5803ccb46380368bd4c",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -380,7 +380,7 @@
       "path": "library/li_chao_tree.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "65a1fa10abd6e46042aaed4a351f595d549bb5aa1b3e45fb748a53c0e12d5b31",
+      "source_sha256": "99611228053745a037c065add95085e7690a18dc37e8e051a92f4aa025942a12",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -388,7 +388,7 @@
       "path": "library/rollback_dsu.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "46e2d5e59a3339b85b3a4413b71918fc05f654b7318eeeece8fcffa04bed1a2c",
+      "source_sha256": "4f691d3f3061de56247c01e9675aaf86fdc92369178ee275fddc93cbbe1d1041",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -396,7 +396,7 @@
       "path": "library/sos_dp.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "9321cf1f74b829caa4bad76a65b78806122ec1df82ed062dcd0a55f8632225fc",
+      "source_sha256": "21a2f236b5cba5685546cf0cc6a4c25471371faadea2b23d2d5042d5e2c3f58e",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -404,7 +404,7 @@
       "path": "library/suffix_array.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "f8fca969ca9e878e7cace92f023e6f881d2d8a5e5942527c6ab1273c1fde00e4",
+      "source_sha256": "c71083c30e10bc61cc8e4049be9e221f5f35d98ecb1702abba2b2266790ec1ef",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     },
@@ -412,7 +412,7 @@
       "path": "library/convex_hull.py",
       "ai_generated": true,
       "generator_match": "AST identical including demonstration",
-      "source_sha256": "332e84dc04b4ea40af8510aabf5bbcee7c666b6c1bc7134ada7205a74b0552ba",
+      "source_sha256": "a1bf47238b4d93886f02a9f991006596f9b9382f79c41d7673e34b2c19914d2c",
       "direct_third_party_implementation_source": "not_identified_in_reviewed_records",
       "related_specification_viewed": null
     }
@@ -420,7 +420,7 @@
   "review_date_jst": "2026-10-15",
   "ai_tool": "OpenAI Codex",
   "evidence_access": "Original private creation records reviewed locally; not published. This report is not independent public access to those records.",
-  "third_party_copy_assessment": "No explicit record identifying direct copying or translation of a particular third-party implementation was found in the reviewed creation records. Independence and uniqueness are not established.",
+  "third_party_copy_assessment": "No explicit record identifying direct copying or translation of a particular third-party implementation was found in the reviewed creation records. Concrete copying or distinctive expression matches are assessed individually under the policy in PROVENANCE.md.",
   "task_level_references_viewed": [
     "https://atcoder.github.io/ac-library/master/document_ja/index.html",
     "https://atcoder.jp/contests/dp/tasks",
@@ -428,5 +428,16 @@
     "https://atcoder.github.io/ac-library/master/document_ja/maxflow.html",
     "https://atcoder.github.io/ac-library/master/document_ja/convolution.html",
     "https://atcoder.github.io/ac-library/master/document_ja/twosat.html"
-  ]
+  ],
+  "handling_policy": {
+    "document": "PROVENANCE.md",
+    "jurisdiction": "Japan",
+    "disclosure": "State AI generation and confirmed reference materials.",
+    "investigation_scope": "Tracing all unknown AI training sources is not a prerequisite for publication.",
+    "case_specific_review": "If a concrete third-party source or distinctive expression match is identified, check the relevant code, source author, URL, changes and permission conditions, then take appropriate action.",
+    "legal_references": [
+      "https://laws.e-gov.go.jp/law/345AC0000000048",
+      "https://www.bunka.go.jp/seisaku/bunkashingikai/chosakuken/pdf/94037901_01.pdf#page=33"
+    ]
+  }
 }

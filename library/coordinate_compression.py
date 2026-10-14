@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # 座標圧縮
 # 条件: 距離は保存しない。面積・長さには元の座標差が必要。
 # 計算量: O(N log N)時間、O(N)空間。

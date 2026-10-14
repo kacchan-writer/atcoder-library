@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # Dijkstra法
 # 条件: 負辺は不可。未到達はfloat("inf")。ヒープの古い距離を読み飛ばす。
 # 計算量: O(V+(V+E) log(E+2))時間、O(V+E)補助空間。

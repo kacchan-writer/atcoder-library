@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # 閲覧した参考仕様: https://atcoder.github.io/ac-library/master/document_ja/maxflow.html
 # 最大流・最小カット / Dinic
 # 条件: 整数の非負容量、s!=t。flowは残余容量を変更し、追加で流れた量を返す。深いDFSも反復で処理。

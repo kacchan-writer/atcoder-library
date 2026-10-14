@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # Rollback Union-Find
 # 条件: 経路圧縮をしない。snapshotは現在の履歴の祖先だけに戻せる。任意の辺削除を直接処理する構造ではない。
 # 計算量: leader/merge O(log N)、snapshot O(1)、rollbackは取り消す併合数O(K)、空間O(N+履歴)。

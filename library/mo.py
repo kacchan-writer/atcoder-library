@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # Moのアルゴリズム・区間の種類数
 # 条件: オンライン問合せや途中の値変更にはこの実装は使えない。空区間可。値はハッシュ可能。
 # 計算量: B≈sqrt(N)としてO(Q log Q + QB + N^2/B)時間、O(N+Q)空間。

@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # 区間の合併
 # 条件: l<=rの半開区間。空区間は除く。接する区間もまとめる設定。
 # 計算量: O(N log N)時間、O(N)空間。

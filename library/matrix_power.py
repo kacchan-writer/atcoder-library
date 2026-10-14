@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # 行列累乗
 # 条件: 正方行列、指数T>=0、mod>=1。行・列ベクトルの向きを統一する。Pythonの大きなKには重い。
 # 計算量: K×K行列をT乗: O(K^3 log(T+1))時間、O(K^2)空間。

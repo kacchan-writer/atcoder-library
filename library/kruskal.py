@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # 最小全域木・Kruskal法
 # 条件: 負辺・多重辺可。非連結なら最小全域森になる。戻り値の辺数がn-1か確認する。
 # 計算量: O(V+E log(E+1))時間、O(V+E)空間。

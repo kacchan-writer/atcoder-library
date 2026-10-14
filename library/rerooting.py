@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # 全方位木DP・全頂点からの距離和
 # 条件: 連結な無向・重みなしの木。一般の全方位木DPでは除外計算用のprefix/suffixも設計する。
 # 計算量: O(N)時間、O(N)空間。

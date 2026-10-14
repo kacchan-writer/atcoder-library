@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # セグメント木
 # 条件: opは結合的、eは単位元。交換則は不要。区間更新はGの遅延セグ木へ。
 # 計算量: 構築O(N)、更新・問合せO(log N)、空間O(N)。opがO(1)のとき。

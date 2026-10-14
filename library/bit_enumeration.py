@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # bit全探索
 # 条件: この実装は空集合を含む。負数も可。Nが30以上だと単純全探索は重い。
 # 計算量: O(N 2^N)時間、補助空間O(1)。

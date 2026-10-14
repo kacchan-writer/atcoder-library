@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # DFS・連結成分・木の帰りがけ順
 # 条件: componentsは無向グラフ用。tree_orderは空でない連結な木専用。再帰を使わない。
 # 計算量: O(V+E)時間、O(V)補助空間。

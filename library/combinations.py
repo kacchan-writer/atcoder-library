@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # 組合せ・階乗・逆元
 # 条件: pは素数、0<=N<pが必須。素数判定はしない。N>=pや合成数modには流用不可。
 # 計算量: 前計算O(N+log p)、問合せO(1)、空間O(N)。

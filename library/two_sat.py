@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # 閲覧した参考仕様: https://atcoder.github.io/ac-library/master/document_ja/twosat.html
 # 2-SAT
 # 条件: 節は2リテラルまで。3-SATには使えない。このSCC実装の成分順に依存して割当を作る。

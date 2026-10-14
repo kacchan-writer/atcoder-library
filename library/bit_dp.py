@@ -1,4 +1,4 @@
-# AI生成: OpenAI Codex（2026-10-12）。出典の確認範囲は PROVENANCE.md を参照。
+# AI生成: OpenAI Codex（2026-10-12）。参照資料・運用方針: PROVENANCE.md。
 # bit DP・巡回セールスマン
 # 条件: 0始点で全頂点を一度ずつ訪れ0へ戻る。有向も可、欠辺はinf。N=0,1は移動なしで0。
 # 計算量: O(N^2 2^N)時間、O(N 2^N)空間。
